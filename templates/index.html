@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles.css">
+    <script src="../static/app.js" defer></script>
+    <title>PIA</title>
+
+
+
+
+<body>
+    <nav class="navbar">
+        <div class="logo">EQUIPO 4</div>
+        <ul class="nav-links">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#servicios">PORTAFOLIO</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+
+        <video class="video" autoplay muted loop>
+
+            <source src="{{ url_for ('static', filename='/video.mp4') }}" type="video/mp4">
+            
+            </video>
+
+        <h1>Lenguajes de Programación</h1>
+        <p>Los Lenguajes de Programación son herramientas que permiten a los desarrolladores comunicarse con las computadoras mediante un conjunto de instrucciones escritas con reglas sintácticas.</p>
+        <a href="#mas" class="btn-primary">Descubrir Más</a>
+    </header>
+
+
+        <section id="mas">
+
+
+    <section id="linea-tiempo" class="timeline-section">
+    <h2>📜 Evolución Histórica de los Lenguajes</h2>
+    <div class="timeline-container">
+        <!-- Pre-1950 -->
+        <div class="timeline-item">
+            <img src="{{ url_for ('static', filename='/1.jpg') }}" alt="Pre-1950" class="timeline-img">
+            <div class="timeline-content">
+                <div class="timeline-year">1883-1945</div>
+                <h3>Orígenes Mecánicos</h3>
+                <ul class="timeline-list">
+                    <li>1883: Ada Lovelace - Primer algoritmo para la Máquina Analítica</li>
+                    <li>1930s: Alonzo Church - Cálculo lambda</li>
+                    <li>1944: Konrad Zuse - Plankalkül (primer lenguaje conceptual)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1950-1960 -->
+        <div class="timeline-item">
+            <img src="{{ url_for ('static', filename='/2.jpg') }}" alt="1950s" class="timeline-img">
+            <div class="timeline-content">
+                <div class="timeline-year">1950-1960</div>
+                <h3>Nacimiento de los Lenguajes Modernos</h3>
+                <ul class="timeline-list">
+
+                    <li>1957: FORTRAN (John Backus/IBM)</li>
+                    <li>1958: Lisp (John McCarthy/MIT)</li>
+                    <li>1959: COBOL (Grace Hopper)</li>
+                    <li>1964: BASIC (Kemeny & Kurtz)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1970-1980 -->
+        <div class="timeline-item">
+            <img src="{{ url_for ('static', filename='/3.jpg') }}" alt="1970s" class="timeline-img">
+            <div class="timeline-content">
+                <div class="timeline-year">1970-1980</div>
+                <h3>Era de los Paradigmas</h3>
+                <ul class="timeline-list">
+                    <li>1972: C (Dennis Ritchie) y Prolog</li>
+                    <li>1983: Ada (DoD de EE.UU.)</li>
+                    <li>1985: Miranda (precursor de Haskell)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 1990-Actualidad -->
+        <div class="timeline-item">
+            <img src="{{ url_for ('static', filename='/4.jpg') }}" alt="Modernidad" class="timeline-img">
+            <div class="timeline-content">
+                <div class="timeline-year">1990-2024</div>
+                <h3>Internet y Modernidad</h3>
+                <ul class="timeline-list">
+                    <li>1991: Python (Guido van Rossum)</li>
+                    <li>1995: JavaScript, PHP, Java</li>
+                    <li>2007: Swift (Apple)</li>
+                    <li>2023: Mojo (Python/CUDA)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="clasificacion" class="cards-container">
+    <h2>💻 Modelos de Ejecución</h2>
+    <div class="cards">
+        <!-- Compilados -->
+                <div class="card">
+            <h3>🔨 Lenguajes Compilados</h3>
+            <div class="comparison-grid">
+                <div class="pro-con">
+                    <div class="pro">
+                    <p class="history">Los lenguajes compilados traducen el código fuente completo a lenguaje máquina mediante un compilador antes de su ejecución, logrando alta velocidad y optimizaciones avanzadas. Requieren etapas de compilación, suelen generar ejecutables independientes y son eficaces en sistemas operativos, aplicaciones científicas, sistemas empotrados y aplicaciones críticas.</p>
+                        <h4>✅ Ventajas</h4>
+                        <ul>
+                            <li>Ejecución rápida</li>
+                            <li>Optimizaciones avanzadas</li>
+                        </ul>
+                    </div>
+                    <div class="con">
+                        <h4>❌ Desventajas</h4>
+                        <ul>
+                            <li>Menos portables</li>
+                            <li>Tiempos de compilación largos</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="language-examples">
+                    <h4>📌 Ejemplos</h4>
+                    <p>C, C++, Rust, Go, Ada</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interpretados -->
+        <div class="card">
+            <h3>🎮 Lenguajes Interpretes</h3>
+                            <p class="history">Los lenguajes interpretados usan un programa (intérprete) que lee, analiza y ejecuta cada instrucción en tiempo real, sin generar binarios previos. Suelen funcionar sobre código fuente o bytecode; muchos incluyen un REPL para pruebas interactivas. Ofrecen gran dinamismo: permiten carga y modificación de módulos en caliente, introspección y metaprogramación. Son altamente portables, ya que basta instalar el intérprete en cada plataforma. Pese a menor velocidad frente a compilados, brillan en scripting, automatización, prototipado rápido y desarrollo web con marcos como Django o Node.js.</p>
+                            </div>
+
+
+
+
+        <!-- Híbridos -->
+        <div class="card">
+            <h3>⚡ Híbridos/JIT</h3>
+                <p class="history">Los lenguajes híbridos combinan compilación y ejecución interpretada para equilibrar portabilidad y rendimiento. Primero traducen el código fuente a un formato intermedio o bytecode (AOT o LTO), que luego un motor JIT o un intérprete optimiza y ejecuta en tiempo real. Esto permite aplicar optimizaciones dinámicas según el entorno de ejecución, reducir tiempos de arranque y aún así generar código nativo eficiente. Java, C# (.NET) y JavaScript (V8) son ejemplos, con recolección de basura, perfilado en caliente y despliegue multiplataforma.</p>
+
+            <div class="code-snippet">
+                <pre>// Ejemplo JIT
+function optimize() {
+    // Código optimizado en tiempo real
+}</pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="clasificacion" class="cards-container">
+    <h2>🧠 Paradigmas de Programación</h2>
+    <div class="cards">
+        <!-- Imperativo -->
+        <div class="card">
+            <h3>📜 Imperativo</h3>
+            <div class="paradigm-info">
+                <p class="history">Un lenguaje imperativo define una serie de instrucciones que cambian explícitamente el estado del programa mediante variables, asignaciones, bucles, condicionales y llamadas a funciones. Ofrece control detallado del flujo de ejecución. Ejemplos incluyen C, Pascal, Fortran y Java. Es ideal para sistemas críticos y embebidos.</p>
+                <div class="language-grid">
+                    <span class="language-tag">C</span>
+                    <span class="language-tag">Pascal</span>
+                    <span class="language-tag">COBOL</span>
+                </div>
+                <div class="code-snippet">
+                    <pre>// Ejemplo C
+int main() {
+    printf("Hola Mundo");
+}</pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Funcional -->
+        <div class="card">
+            <h3>λ Funcional</h3>
+            <p class="history">Los lenguajes funcionales sumamente avanzados se basan en el cálculo lambda, enfatizando la evaluación de funciones puras sin efectos secundarios. Promueven la programación declarativa, donde se definen relaciones y transformaciones. Ejemplos destacados incluyen Haskell, Lisp, OCaml y F#. Facilitan el manejo de concurrencia por inmutabilidad y expresiones de orden superior. Su curva de aprendizaje es pronunciada, pero ofrecen ventajas en verificación formal y mantenimiento. Son idóneos para sistemas distribuidos, procesamiento de datos y algoritmos recursivos eficientes.</p>
+        </div>
+
+        <!-- Lógico -->
+        <div class="card">
+            <h3>🔍 Lógico</h3>
+            <p class="history">Un lenguaje lógico utiliza lógica de primer orden para expresar hechos, reglas y consultas. Un motor de inferencia resuelve automáticamente las relaciones definiendo deducciones basadas en cláusulas y unificaciones. Facilita programación declarativa, adecuada para inteligencia artificial, sistemas expertos y procesamiento lógico. Prolog y Mercury destacan.</p>
+            <div class="code-snippet">
+                <pre>% Ejemplo Prolog
+padre(juan, maria).
+abuelo(X,Y) :- padre(X,Z), padre(Z,Y).</pre>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="clasificacion" class="cards-container">
+        <h2>🛠️ Ecosistema de Desarrollo</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Compiladores</h3>
+            <ul class="tool-list">
+            <div class="paradigm-info">
+                <p class="history">Los compiladores traducen el código fuente completo a código máquina en múltiples fases (análisis léxico, sintáctico, semántico, optimización y generación). Permiten optimizaciones profundas y producen ejecutables autónomos. Ejemplos: GCC, Clang y javac, fundamentales en desarrollo de software de alto rendimiento.</p>
+
+
+                <li>GCC (C/C++)</li>
+                <li>Clang</li>
+                <li>Roslyn (C#)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Máquinas Virtuales</h3>
+                            <p class="history">Las máquinas virtuales ejecutan código intermedio (bytecode) proporcionando capa de abstracción entre software y hardware. Ofrecen portabilidad, gestión automática de memoria y seguridad. Ejemplos famosos: Java Virtual Machine (JVM) y Common Language Runtime (CLR). Facilitan multiplataforma y aislamiento de aplicaciones.</p>
+
+            <ul>
+                <li>JVM (Java/Kotlin)</li>
+                <li>.NET CLR (C#/F#)</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>IDEs</h3>
+                                        <p class="history">Los modernos IDEs (Entornos de Desarrollo Integrado) combinan editor de código, compilador/intérprete, depurador y herramientas de gestión de proyectos en una interfaz unificada. Mejoran productividad con autocompletado, resaltado de sintaxis y refactorización. Ejemplos: Visual Studio, IntelliJ IDEA, Eclipse y VSCode.</p>
+
+            <ul>
+                <li>VSCode</li>
+                <li>IntelliJ</li>
+                <li>PyCharm</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="clasificacion" class="cards-container">
+        <h2>🔍 Datos Curiosos</h2>
+    <div class="curiosidad-carousel">
+        <div class="curiosidad-item active">
+            <p>🐍 Python → Nombrado por Monty Python</p>
+        </div>
+        <div class="curiosidad-item">
+            <p>⚡ JavaScript → Creado en 10 días (1995)</p>
+        </div>
+        <div class="curiosidad-item">
+            <p>💾 C → Desarrollo original de UNIX</p>
+        </div>
+    </div>
+</section>
+
+<section class="video-section">
+                <div class="card">
+    <h2>Recursos Multimedia</h2>
+    <div class="video-grid">
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/pWw4UtQhdek" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/zYrpCPHsRfw" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+    <main>
+        <section id="servicios" class="cards-container">
+            <h2>Portafolio</h2>
+            <div class="cards">
+                <div class="card">
+                    <h3>Actividad Fundamental 1</h3>
+                    <p>La evaluación de Ordinario en Lenguajes de Programación abarca paradigmas imperativo, lógico, funcional y scripting,  midiendo habilidades aplicadas.</p>
+                    <a href="{{ url_for('static', filename='/1.pdf') }}" download class="btn-primary" title="Descargar PDF 1">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/1.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <h3>Actividad Fundamental 2</h3>
+                    <p>La evaluación de Medio Curso de Lenguajes de Programación integra profunda análisis de compiladores, intérpretes, paradigmas, midiendo habilidades aplicadas.</p>
+                    <a href="{{ url_for('static', filename='/2.pdf') }}" download class="btn-primary" title="Descargar PDF 2">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/2.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <h3>Actividad Fundamental 3</h3>
+                    <p>El Producto Integrador sintetiza el aprendizaje obtenido durante la unidad de aprendizaje, demostrando dominio, y midiendo habilidades aplicadas en la unidad.</p>
+                    <a href="{{ url_for('static', filename='/3.pdf') }}" download class="btn-primary" title="Descargar PDF 3">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/3.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <h3>Actividad Fundamental 4</h3>
+                    <p>Introducción a los diagramas de flujo; tipos de datos; estructuras de datos lineales y no lineales; y principios de programación orientada a objetos.</p>
+                    <a href="{{ url_for('static', filename='/5.pdf') }}" download class="btn-primary" title="Descargar PDF 5">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/4.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <h3>Actividad Fundamental 5</h3>
+                    <p>Introducción a los Lenguajes script interpretados automatizadores de tareas, desarrollo web y administración de sistemas con sintaxis flexible y portabilidad.</p>
+                    <a href="{{ url_for('static', filename='/5.pdf') }}" download class="btn-primary" title="Descargar PDF 5">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/5.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+    
+                <div class="card">
+                    <h3>Actividad Fundamental 6</h3>
+                    <p>Se analizan Lenguajes funcionales: define conceptos, explora aplicaciones prácticas, ejemplifica código y concluye sobre su relevancia en programación.</p>
+                    <a href="{{ url_for('static', filename='/6.pdf') }}" download class="btn-primary" title="Descargar PDF 6">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/6.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Actividad Fundamental 7</h3>
+                    <p>Se examinan Lenguajes Lógicos: conceptos, detalla características, ventajas/desventajas, aplicaciones en IA y bases de datos.</p>
+                    <a href="{{ url_for('static', filename='/7.pdf') }}" download class="btn-primary" title="Descargar PDF 7">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/7.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Actividad Fundamental 8</h3>
+                    <p>Aborda lenguajes Imperativos: conceptos, características, ventajas/desventajas, aplicaciones comunes, y su importancia.</p>
+                    <a href="{{ url_for('static', filename='/8.pdf') }}" download class="btn-primary" title="Descargar PDF 8">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/8.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Actividades Extra</h3>
+                    <p>Se analizan Lenguajes de Programación: evolución histórica, sintaxis, y línea temporal características y aplicaciones.</p>
+                    <a href="{{ url_for('static', filename='/9.pdf') }}" download class="btn-primary" title="Descargar PDF 9">Descargar</a>
+                    <div class="pdf-label"></div>
+                    <div class="pdf-preview">
+                        <embed src="{{ url_for('static', filename='/9.pdf') }}" type="application/pdf" />
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    
+
+
+
+
+        </section>
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <form id="contact-form" method="POST" action="/send_email">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        
+       <!-- Contenedor para mensajes flash -->
+       <div id="flash-messages" class="flash-messages"></div>
+       
+        <section id="acerca" class="about-section">
+            <h2>Acerca de Nosotros</h2>
+            <p><em>Nombre Integrante 1    <strong> Matrícula, Carrera </strong></em></p>
+            <p><em> Nombre Integrante 2   <strong> Matrícula, Carrera</strong></em></p>
+            <p><em> Nombre Integrante 3    <strong> Matrícula, Carrera</strong></em></p>
+            <p><em> Nombre Integrante 4    <strong> Matrícula, Carrera</strong></em></p>
+         
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
