@@ -83,41 +83,31 @@ source venv/bin/activate
 # 3. Install the required dependencies
 pip install flask flask-mail python-dotenv
 
-📊 Key Technical Variables Explained
+## 📊 Key Technical Variables Explained
 Variable (File)	Description	Data Type
 MAIL_USERNAME (app.py / .env)	Email address used to send contact form messages.	string
 MAIL_PASSWORD (app.py / .env)	App-specific password for SMTP server authentication.	string
 curiosidadIndex (app.js)	Tracks the current index of the active curiosity item in the carousel.	integer
 timelineObserver (app.js)	IntersectionObserver instance that triggers the fade-in animation when a timeline item enters the viewport.	IntersectionObserver
 formData (app.js)	FormData object containing the user's name, email, and message captured from the HTML form.	FormData
-🧪 How to Run the Project
+## 🧪 How to Run the Project
 
   Ensure your .env file is configured with your email credentials.
-
   Open your terminal in the project root directory.
-
   Run the Flask application:
-
 
 python app.py
 
-  Open your web browser and navigate to:
-
-
-
-http://127.0.0.1:5000
+  Open your web browser and navigate to: http://127.0.0.1:5000
 
 The website will be served locally.
-🎯 Features & User Interaction
+
+## 🎯 Features & User Interaction
 
   Interactive Timeline: Users can scroll through a visual history of programming languages, enhanced with CSS animations.
-
   Downloadable Resources: The portfolio section allows users to preview and download PDFs directly from the browser.
-
   Contact Form: A fully functional contact form that sends messages directly to the administrator's email inbox via SMTP.
-
   Video Gallery: Embedded YouTube videos for auxiliary learning content.
-
   Mobile-First Design: The site is fully responsive and adapts to mobile, tablet, and desktop screen sizes.
 
 
