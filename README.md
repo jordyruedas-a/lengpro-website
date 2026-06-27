@@ -92,16 +92,16 @@ timelineObserver (app.js)	IntersectionObserver instance that triggers the fade-i
 formData (app.js)	FormData object containing the user's name, email, and message captured from the HTML form.	FormData
 🧪 How to Run the Project
 
-    Ensure your .env file is configured with your email credentials.
+  Ensure your .env file is configured with your email credentials.
 
-    Open your terminal in the project root directory.
+  Open your terminal in the project root directory.
 
-    Run the Flask application:
+  Run the Flask application:
 
 
 python app.py
 
-    Open your web browser and navigate to:
+  Open your web browser and navigate to:
 
 
 
@@ -110,15 +110,15 @@ http://127.0.0.1:5000
 The website will be served locally.
 🎯 Features & User Interaction
 
-    Interactive Timeline: Users can scroll through a visual history of programming languages, enhanced with CSS animations.
+  Interactive Timeline: Users can scroll through a visual history of programming languages, enhanced with CSS animations.
 
-    Downloadable Resources: The portfolio section allows users to preview and download PDFs directly from the browser.
+  Downloadable Resources: The portfolio section allows users to preview and download PDFs directly from the browser.
 
-    Contact Form: A fully functional contact form that sends messages directly to the administrator's email inbox via SMTP.
+  Contact Form: A fully functional contact form that sends messages directly to the administrator's email inbox via SMTP.
 
-    Video Gallery: Embedded YouTube videos for auxiliary learning content.
+  Video Gallery: Embedded YouTube videos for auxiliary learning content.
 
-    Mobile-First Design: The site is fully responsive and adapts to mobile, tablet, and desktop screen sizes.
+  Mobile-First Design: The site is fully responsive and adapts to mobile, tablet, and desktop screen sizes.
 
 
 
