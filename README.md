@@ -1,6 +1,8 @@
 
 ## 📋 Executive Summary
 
+**Video Demo:** [Watch on YouTube](https://youtu.be/mt_IKsgirLY)
+
 This project is a fully functional, responsive web application built using the **Flask micro-framework**. It serves as an interactive educational portfolio focused on the history, paradigms, and technical ecosystems of programming languages. 
 
 The front-end features a dynamic timeline, a card-based layout for technical content, a video gallery, and a working contact form. The back-end handles dynamic route rendering, static file serving, and a secure email dispatching system using Flask-Mail.
